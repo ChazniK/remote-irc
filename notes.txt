@@ -1,0 +1,31 @@
+Typical process since process(server) central point for clients to connect to for messsage delivery/multiplexing
+
+Server needs copy of global state info
+
+All communication is routed through the server
+
+Components:
+    Servers - backbone central linking point for all other components
+    Clients
+        user Clients - text based interface for users
+        service clients - not used manually. Generally used to provide info or a service to users.
+
+IRC Services:
+    Client locator
+    Server
+    Channel hosting and management
+
+Each server has globak state database about entire network
+
+
+• /nick <nickname>: Implement the notion of nickname (the login by default, max- imum 9 characters, like in the RFC).
+
+• /join <#chan>, /leave [#channel] , etc.: Implement the notion of channel.
+
+• /who: Who is connected on the channel?
+
+• /msg <nick> <message>: Sends a message to a specific user on the server.
+
+• /connect <server> [port]: Connects to the server from the client.
+
+• Switch the code in non-blocking mode: the code provided is blocking in some cases. If a client does not respond, the server can block itself after a short delay. Be careful only one Select is authorized in your code.
