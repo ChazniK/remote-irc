@@ -6,10 +6,6 @@ import (
 	"net"
 )
 
-//Listen
-//Accept
-//Handle connection -> thread
-
 func main() {
 	l, err := net.Listen("tcp", ":8080")
 
